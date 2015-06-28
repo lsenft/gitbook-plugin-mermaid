@@ -23,6 +23,9 @@ function processPage(page) {
 module.exports = {
   book: {
     assets: "./book",
+    css: [
+      "mermaid.css"
+    ],
     js: [
       "plugin.js"
     ],
@@ -31,7 +34,7 @@ module.exports = {
          // script is added after head section and not via book:js section
          //   because otherwise 'require' definitions conflicts with
          //   gitbook's app.js script (I can not tell why and how to fix)
-         return '<script src="' + options.staticBase + '/plugins/gitbook-plugin-mermaid/mermaid.full.min.js" id="mermaid-script"></script>';
+         return '<script src="' + options.staticBase + '/plugins/gitbook-plugin-mermaid/mermaid.min.js" id="mermaid-script"></script>';
       },
     }
   },
